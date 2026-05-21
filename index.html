@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style/hiasan.css">
+</head>
+
+<script src="./js/jees.js"></script>
+<script>
+// ===== Trigger animasi saat elemen masuk viewport =====
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Munculkan skill cards dengan delay berurutan
+    const cards = document.querySelectorAll('.skill-card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('visible');
+        }, 300 + (index * 100)); // delay bertahap
+    });
+
+    // 2. Munculkan proficiency section
+    const profSection = document.querySelector('.proficiency-section');
+    if (profSection) {
+        setTimeout(() => {
+            profSection.classList.add('visible');
+            // Animasi bar fill
+            document.querySelectorAll('.bar-fill').forEach(bar => {
+                const width = bar.dataset.w || '0';
+                bar.style.width = width + '%';
+            });
+        }, 800);
+    }
+
+});
+</script>
+
+<body>
+
+    <div id="bg-animation">
+        <div class="navbar-custom">
+
+            <div class="left">
+                <img src="logos.png" class="logo">
+            </div>
+
+            <div class="menu">
+                <button style="font-family: poppins;" class="hehe">Main</button>
+                <button style="font-family: poppins;" class="hehe">Skills</button>
+                <button style="font-family: poppins;" class="hehe">Portfolio</button>
+                <button style="font-family: poppins;" class="hehe">Contact</button>
+            </div>
+
+            <div class="right"></div>
+
+        </div>
+
+        <div class="container-row">
+           <div class="leftg main1">
+                <strong>
+                    <h1 style="font-family: poppins;">
+                        Hello, <br>
+                        Im Franklin Jaya
+                    </h1>
+                </strong>
+                <h5>
+                    Iot System Development|Full Stack Developer|AI Engineer
+                </h5>
+                <p style="font-family: poppins;" class="main1">
+                    A 6th semester student at Ciputra University Makassar, 
+                    passionate about Artificial Intelligence and Internet of Things. 
+                    I enjoy building innovative digital solutions that combine 
+                    intelligent systems, modern technology, and real-world impact, 
+                    skilled in Python programming, AI development, IoT systems, 
+                    web development, and modern software engineering.
+                </p>
+           </div>
+           <div class="rightg">
+               <img src="fots.png" alt="" class="profile-img">
+           </div>
+        </div>
+
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <div class="second-section section-box">
+
+        <div class="section-title fade-up">
+            <h1>My <span style="color: #7eb3ff;">Skills</span></h1>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="card-icon">
+                    <div class="icon-bg">
+                        <img src="eaih.png" alt="" class="iconnd">
+                    </div>
+                </div>
+                <h3 class="card-title">AI Development</h3>
+                <p class="card-desc">Building AI systems for automations systems.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-icon">
+                    <div class="icon-bg">
+                        <img src="iodih.png" alt="" class="iconnd">
+                    </div>
+                </div>
+                <h3 class="card-title">IoT Systems</h3>
+                <p class="card-desc">Making IoT systems for helping human life, as solutions for everyday problems.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-icon">
+                    <div class="icon-bg">
+                        <img src="moapp.webp" alt="" class="iconnd">
+                    </div>
+                </div>
+                <h3 class="card-title">Mobile Dev</h3>
+                <p class="card-desc">Creating responsive and solution with mobile applications.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="card-icon">
+                    <div class="icon-bg">
+                        <img src="console.png" alt="" class="iconnd">
+                    </div>
+                </div>
+                <h3 class="card-title">Game & AR Development</h3>
+                <p class="card-desc">Developing AR games, that are using for learn history.</p>
+            </div>
+
+        </div>
+    </div>
+        <!-- ===== TOOLS & TECHNOLOGIES SECTION ===== -->
+        <div class="tools-section section-box">
+
+            <div class="section-title fade-up">
+                <h1>Tools & <span style="color: #7eb3ff;">Technologies</span></h1>
+                <p class="tools-subtitle">Technologies I work with</p>
+            </div>
+
+            <div class="tools-row">
+                <div class="tools-category">
+                    <div class="tools-category-label">
+                        <span>Mobile Development</span>
+                        <div class="tools-divider"></div>
+                    </div>
+                    <div class="tools-cards">
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                            </div>
+                            <span class="tool-name">Flutter</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
+                            </div>
+                            <span class="tool-name">Laravel</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            </div>
+                            <span class="tool-name">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-category">
+                    <div class="tools-category-label">
+                        <span>IoT Development</span>
+                        <div class="tools-divider"></div>
+                    </div>
+                    <div class="tools-cards">
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Laravel">
+                            </div>
+                            <span class="tool-name">Arduino IDE</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="MySQL">
+                            </div>
+                            <span class="tool-name">Supabase</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="wokwi.png" alt="Wokwi">
+                            </div>
+                            <span class="tool-name">Wokwi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science & AI -->
+            <div class="tools-row">
+                <div class="tools-category">
+                    <div class="tools-category-label">
+                        <span>Data Science &amp; AI</span>
+                        <div class="tools-divider"></div>
+                    </div>
+                    <div class="tools-cards">
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            </div>
+                            <span class="tool-name">Python</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                            </div>
+                            <span class="tool-name">TensorFlow</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                               <img src="ultra.svg" alt="Ultralytics">
+                            </div>
+                            <span class="tool-name">YOLO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-category">
+                    <div class="tools-category-label">
+                        <span>Design &amp; Tools</span>
+                        <div class="tools-divider"></div>
+                    </div>
+                    <div class="tools-cards">
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                            </div>
+                            <span class="tool-name">Figma</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                            </div>
+                            <span class="tool-name">VS Code</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Github">
+                            </div>
+                            <span class="tool-name">Github</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design & Tools -->
+            <div class="tools-row tools-row-last">
+                <div class="tools-category">
+                    <div class="tools-category-label">
+                        <span>Game &amp; AR</span>
+                        <div class="tools-divider"></div>
+                    </div>
+                    <div class="tools-cards">
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity">
+                            </div>
+                            <span class="tool-name">Unity</span>
+                        </div>
+                        <div class="tool-card">
+                            <div class="tool-icon-wrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender">
+                            </div>
+                            <span class="tool-name">Blender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="section-box">
+ 
+                <div class="section-title fade-up">
+                    <h1>My <span style="color: #7eb3ff;">Projects</span></h1>
+                    <p class="projects-subtitle">Things I've built</p>
+                </div>
+            
+                <div class="projects-grid">
+            
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+                        
+                        <div class="project-body">
+                            <h3 class="project-title">RPSLO</h3>
+                            <p class="project-desc">
+                                An IoT project are used to help human gathering Ocean Plastic Monument, RPSLO are integrated with YOLO using Raspberry Pi.
+                            </p>
+                            <div class="project-footer">
+                                <a href="#" class="btn-detail">
+                                    More Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3 class="project-title">Nama Project 2</h3>
+                            <p class="project-desc">
+                                Deskripsi singkat project ini. Ceritakan apa yang dibangun, teknologi yang dipakai, dan dampaknya.
+                            </p>
+                            <div class="project-footer">
+                                <a href="#" class="btn-detail">
+                                    More Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3 class="project-title">Nama Project 3</h3>
+                            <p class="project-desc">
+                                Deskripsi singkat project ini. Ceritakan apa yang dibangun, teknologi yang dipakai, dan dampaknya.
+                            </p>
+                            <div class="project-footer">
+                                <a href="#" class="btn-detail">
+                                    More Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Project Card 4 -->
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3 class="project-title">Nama Project 4</h3>
+                            <p class="project-desc">
+                                Deskripsi singkat project ini. Ceritakan apa yang dibangun, teknologi yang dipakai, dan dampaknya.
+                            </p>
+                            <div class="project-footer">
+                                <a href="#" class="btn-detail">
+                                    More Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+        el: "#bg-animation",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1,
+        scaleMobile: 1.00,
+        color: 0x444444,
+        points: 12.00,
+        backgroundColor: 0x000000,
+        maxDistance: 30.00,
+        spacing: 20.00,
+        backgroundAlpha: 0.9 // <--- This sets the canvas background to transparent
+        })
+    </script>
+
+</body>
+</html>
