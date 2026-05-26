@@ -135,6 +135,7 @@ p, h1, h5 {
 
     height: auto;
 
+    transform: scaleX(-1);
 }
 
 @media (max-width: 768px) {
@@ -908,7 +909,7 @@ p, h1, h5 {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 2px;
     background: linear-gradient(180deg, #7eb3ff, rgba(255,255,255,0.3));
     top: 0;
     bottom: 0;
