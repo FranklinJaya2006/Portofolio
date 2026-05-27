@@ -1,3 +1,7 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 body,
 html {
     width: 100%;
@@ -67,7 +71,7 @@ button {
     height: auto;
 }
 
-p, h1, h5 {
+p, h1, h4, h5 {
     background: transparent;
     border: none;
     color: rgb(255, 255, 255);
@@ -1075,4 +1079,64 @@ p, h1, h5 {
     .timeline-content {
         padding: 16px 18px;
     }
+}
+
+.section-contact {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    margin-bottom: 1.5rem;
+    width: auto;
+    height: auto;
+    margin-top: 70px;
+    padding: 0;
+}
+
+.contact_contain {
+    display: flex;
+    width: 90%;
+    padding: 40px 40px;
+    margin-left: 1;
+}
+
+.contact-card-left {
+    flex: 1;
+}
+
+.contact-card-right {
+    flex: 1;
+}
+
+.logo-border {
+    border: 1px solid rgba(126, 180, 255, 0.27);
+    border-radius: 10px;
+    width: 8vh;
+    height: auto;
+}
+
+.flexcon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.flexcon p {
+    margin: 0;
+}
+
+.flex-left-con {
+    display: flex;
+    gap: 10px;
+}
+
+.flexlef1 {
+    flex: 1;
+    align-items: start;
+}
+
+.contact-desc {
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
 }
